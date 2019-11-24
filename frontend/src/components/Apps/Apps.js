@@ -6,6 +6,8 @@ import "./Apps.css";
 import requestsHandler from "../../requestsHandling";
 import App from "../App/App";
 import GetOneApp from "../GetOneApp/GetOneApp";
+import commonUrl from '../../commonUrl';
+
 
 class Apps extends Component {
   state = {
@@ -17,7 +19,7 @@ class Apps extends Component {
 
   async componentDidMount() {
     await axios
-      .get("http://localhost:5000/api/apps", {
+      .get(`${commonUrl}/api/apps`, {
         "Content-Type": "application/json"
       })
       .then(response => {
@@ -32,7 +34,7 @@ class Apps extends Component {
   addNewApp = async () => {
     if (this.state.newAppName && this.state.newAppId) {
       axios
-        .post(`http://localhost:5000/api/apps/${this.state.newAppId}`, {
+        .post(`${commonUrl}/api/apps/${this.state.newAppId}`, {
           name: this.state.newAppName
         })
         .then(response => {

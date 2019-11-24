@@ -4,6 +4,7 @@ import GetOneApp from "../GetOneApp/GetOneApp";
 import App from "../App/App";
 import "./Versions.css";
 import requestHandler from "../../requestsHandling";
+import commonUrl from '../../commonUrl';
 
 import axios from "axios";
 
@@ -16,11 +17,11 @@ class Versions extends Component {
   addVersion = () => {
     axios
       .post(
-        `http://localhost:5000/api/apps/${this.state.selectedApp.id}/${this.state.versionId}`
+        `${commonUrl}/api/apps/${this.state.selectedApp.id}/${this.state.versionId}`
       )
       .then(response => {
         axios
-          .get(`http://localhost:5000/api/apps/${this.state.selectedApp.id}`)
+          .get(`${commonUrl}/api/apps/${this.state.selectedApp.id}`)
           .then(response =>
             this.setState({ selectedApp: requestHandler(response, null), versionId: '' })
           )

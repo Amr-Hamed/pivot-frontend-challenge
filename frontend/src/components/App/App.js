@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import axios from "axios";
 
 import requestsHandler from "../../requestsHandling";
+import commonUrl from '../../commonUrl';
 import "./App.css";
 
 class App extends Component {
@@ -13,7 +14,7 @@ class App extends Component {
       }
     }
     await axios
-      .delete(`http://localhost:5000/api/apps/${appId}`)
+      .delete(`${commonUrl}/api/apps/${appId}`)
       .then(response => {
         const result = requestsHandler(response);
         this.props.removeApp(result);

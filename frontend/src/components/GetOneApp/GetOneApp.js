@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import axios from "axios";
 
 import requestsHandler from "../../requestsHandling";
+import commonUrl from '../../commonUrl';
 import "./GetOneApp.css";
 
 class GetOneApp extends Component {
@@ -12,7 +13,7 @@ class GetOneApp extends Component {
 
   getApp = async () => {
     axios
-      .get(`http://localhost:5000/api/apps/${this.state.searchAppId}`)
+      .get(`${commonUrl}/api/apps/${this.state.searchAppId}`)
       .then(response => {
         let result = requestsHandler(response, null);
         this.props.getApp(result);

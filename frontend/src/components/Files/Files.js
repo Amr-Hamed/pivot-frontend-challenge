@@ -7,6 +7,7 @@ import GetOneApp from "../GetOneApp/GetOneApp";
 import App from "../App/App";
 import "./Files.css";
 import requestHandler from "../../requestsHandling";
+import commonUrl from '../../commonUrl';
 
 class Files extends Component {
   state = {
@@ -35,7 +36,7 @@ class Files extends Component {
           formData.append("file", this.state.uploadFile);
           axios
             .post(
-              `http://localhost:5000/api/apps/${this.state.selectedApp.id}/${this.state.selectedVersion}/file`,
+              `${commonUrl}/api/apps/${this.state.selectedApp.id}/${this.state.selectedVersion}/file`,
               formData,
               {
                 headers: {
@@ -46,7 +47,7 @@ class Files extends Component {
             .then(response => {
               axios
                 .get(
-                  `http://localhost:5000/api/apps/${this.state.selectedApp.id}`
+                  `${commonUrl}/api/apps/${this.state.selectedApp.id}`
                 )
                 .then(response =>
                   this.setState({ selectedApp: requestHandler(response, null) })
@@ -71,7 +72,7 @@ class Files extends Component {
         if (this.state.selectedApp.versions[this.state.selectedVersion].file) {
           axios
             .get(
-              `http://localhost:5000${this.state.selectedApp.versions[this.state.selectedVersion].file}`
+              `${commonUrl}${this.state.selectedApp.versions[this.state.selectedVersion].file}`
             )
             .then(response => {
               const result = requestHandler(response, null);
