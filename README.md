@@ -5,7 +5,7 @@
 
 ## Live Demo
 ```
-- You can find the link to the live demo at: [I'm an inline-style link](http://134.209.181.231/)
+- You can find the link to the live demo at: http://134.209.181.231/
 ```  
 
 ## What is this..?
