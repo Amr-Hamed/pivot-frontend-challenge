@@ -1,0 +1,32 @@
+.apps-search-input-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 45%;
+    background-color: #eee;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #3c3c92;
+    font-size: 1vw;
+}
+
+.apps-get-app-button{
+    height: 5vh;
+    background-color: #7272e6;
+    color: white;
+    border-radius: 5px;
+    font-size: 1vw;
+    text-align: center;
+    cursor: pointer;
+    border: 0px;
+    transition: 0.5s;
+}
+
+.apps-get-app-button:hover{
+    background-color: #3C3C92;
+}
+
+.apps-get-app-button:focus{
+    outline: none;
+}

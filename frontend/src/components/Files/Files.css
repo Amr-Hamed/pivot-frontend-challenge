@@ -1,0 +1,68 @@
+.files-app-version-input {
+    display: flex;
+    justify-content: space-between;
+}
+
+.apps-select-version-container,
+.apps-select-version-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 45%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #31419F;
+}
+
+.apps-select-version-container {
+    background-color: #eee;
+
+}
+
+.files-upload-file-input-container {
+    background-color: white;
+}
+
+.files-app-version-input,
+.files-inputs {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid #31419F;
+    margin-top: 2vh;
+}
+
+.apps-select-version-input {
+    background-color: white;
+    height: 5vh;
+    width: 30%;
+    border-radius: 5px;
+    border: 1px solid #31419F;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    color: #E9538C;
+    display: flex;
+    align-content: center;
+    color: #31419F;
+    font-size: 1.3vw;
+}
+
+.apps-select-version-input::placeholder {
+    color: #31419F;
+}
+
+
+.apps-select-version-input-search {
+    width: 60%;
+}
+
+.files-upload-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+}

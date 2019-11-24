@@ -1,0 +1,88 @@
+.apps-item-data {
+    display: flex;
+}
+
+.apps-item-app-data {
+    width: 40%;
+}
+
+.apps-item,
+.apps-selected-item {
+    width: 90%;
+    margin: 2vh auto;
+    border: 1px solid #31419F;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.apps-item {
+    background-color: #676b72;
+}
+
+.apps-item:hover {
+    background-color: #343a44;
+}
+
+
+.apps-selected-item {
+    background-color: #e4729f;
+}
+
+.apps-selected-item:hover {
+    background-color: #c43f74;
+}
+
+.apps-item-data {
+    width: 90%;
+}
+
+.apps-item-data h4,
+.apps-item-data h6 {
+    margin: 1vh auto;
+}
+
+.apps-item-data h4 {
+    font-size: 1.3vw;
+}
+
+.apps-item-data h6 {
+    font-size: 1vw;
+}
+
+.apps-item-versions-data {
+    width: 55%;
+    margin-left: 2vw;
+}
+
+
+.apps-remove-item {
+    height: 2vw;
+    width: 2vw;
+    border-radius: 1vw;
+    font-size: 1vw;
+    border: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+
+.app-item-versions-item,
+.app-item-versions-selected-item {
+    width: 100%;
+    border: 1px solid #fff;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.app-item-versions-selected-item {
+    background-color: #e4729f;
+}
+
